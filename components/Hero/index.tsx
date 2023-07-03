@@ -1,6 +1,8 @@
 import React from 'react'
 
-const index = () => {
+type Props = {}
+
+const index = (props: Props) => {
   return (
     <div>
       hh
