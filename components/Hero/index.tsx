@@ -1,8 +1,9 @@
 import React from 'react'
+import Image from 'next/image'
 
 type Props = {}
 
-const index = (props: Props) => {
+const Hero = (props: Props) => {
   return (
     <div>
       hh
@@ -10,4 +11,4 @@ const index = (props: Props) => {
   )
 }
 
-export default index
+export default Hero
