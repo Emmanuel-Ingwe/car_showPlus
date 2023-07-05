@@ -9,7 +9,7 @@ import { SearchManufacturerProps } from '@/types'
 type Props = {}
 
 const SearchBar = (props: Props) => {
-    const [manufacturer, setManufacturer] = useState
+    const [manufacturer, setManufacturer] = useState('')
 
     const handleSearch = () => {
     }
