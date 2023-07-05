@@ -30,9 +30,9 @@ const Hero = (props: Props) => {
         <div className="hero__image-container">
             <div className="hero__image">
                 <Image src="/hero.png" alt='hero-img' fill className='object-contain'/>
+            </div>
 
                 <div className="hero__image-overlay" />
-            </div>
         </div>
     </div>
   )
