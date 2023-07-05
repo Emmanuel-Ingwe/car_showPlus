@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import { CustomButton } from '@/components'
@@ -5,6 +7,10 @@ import { CustomButton } from '@/components'
 type Props = {}
 
 const Hero = (props: Props) => {
+    const handleScroll = () => {
+
+    }
+
   return (
     <div className='hero'>
         <div className="flex-1 pt-36 padding-x">
@@ -16,7 +22,11 @@ const Hero = (props: Props) => {
                 Streamline your car rental experience with our eforts booking process.
             </p>
 
-            <CustomButton />
+            <CustomButton
+            title="Explore Cars"
+            containerStyles="bg-primary-blue text-white rounded-full mt-10"
+            handleClick={handleScroll}
+             />
         </div>
     </div>
   )

@@ -1,11 +1,22 @@
+"use client"
+
 import React from 'react'
+import Image from 'next/image'
 
 type Props = {}
 
-const index = (props: Props) => {
+const CustomButton = (props: Props) => {
   return (
-    <div>index</div>
+    <button disabled={false}
+    type={"button"}
+    className={`custom-btn`}
+    onClick={() => {}}
+    >
+        <span className="flex-1">
+            title
+        </span>
+    </button>
   )
 }
 
-export default index
+export default CustomButton
