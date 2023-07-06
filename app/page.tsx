@@ -1,4 +1,4 @@
-import { CustomFilter, Hero, SearchBar } from '@/components'
+import { CarCard, CustomFilter, Hero, SearchBar } from '@/components'
 import { CustomButtonProps } from '@/types'
 import { fetchcars } from '@/utils'
 import Image from 'next/image'
@@ -22,8 +22,8 @@ export default async function Home() {
           <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            {/* <CustomFilter title="fuel" /> */}
+            {/* <CustomFilter title="year" /> */}
           </div>
         </div>
 
