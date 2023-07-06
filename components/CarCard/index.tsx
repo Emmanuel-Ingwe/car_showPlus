@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { CarProps } from '@/types'
 import CustomButton from '../CustomButton'
 import { calculateCarRent } from '@/utils'
+import CarDetails from '../CarDetails'
 
 interface CarCardProps {
     car: CarProps;
@@ -56,8 +57,6 @@ const CarCard = ({ car }: CarCardProps) => {
             <p className="car-card__icon-text">{city_mpg} MPG</p>
           </div>
         </div>
-        </div>
-
         <div className="car-card__btn-container">
           <CustomButton
             title='View More'
@@ -67,6 +66,9 @@ const CarCard = ({ car }: CarCardProps) => {
             handleClick={() => setIsOpen(true)}
           />
         </div>
+        </div>
+
+        <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
     </div>
   )
 }
