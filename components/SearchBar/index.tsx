@@ -19,19 +19,6 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-// const SearchBar = () => {
-//   const [manufacturer, setManuFacturer] = useState("");
-//   const [model, setModel] = useState("");
-
-//   const router = useRouter();
-
-//   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-
-//     if (manufacturer.trim() === "" && model.trim() === "") {
-//       return alert("Please provide some input");
-//     }
-
 //     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
 //   };
 
@@ -42,9 +29,13 @@ const SearchBar = (props: Props) => {
     const [manufacturer, setManufacturer] = useState('')
     const [model, setModel] = useState('')
 
-    const handleSearch = () => {
-    }
-
+    const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+          e.preventDefault();
+      
+           if (manufacturer.trim() === "" && model.trim() === "") {
+             return alert("Please provide some input");
+        }
+      }
 
   return (
     <form action="" onSubmit={handleSearch} className="searchbar">
