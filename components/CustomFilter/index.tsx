@@ -48,14 +48,17 @@ const CustomFilter = ({title, options}: CustomFilterProps) => {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
           >
-             <Listbox.Option
+              <Listbox.Options className='custom-filter__options'>
+              {/* Map over the options and display them as listbox options */}
+              {options.map((option) => (
+                <Listbox.Option
                   key={option.title}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 px-4 ${
                       active ? "bg-primary-blue text-white" : "text-gray-900"
                     }`
                   }
-                  // value={option}
+                  value={option}
                 >
                   {({ selected }) => (
                     <>
@@ -69,7 +72,7 @@ const CustomFilter = ({title, options}: CustomFilterProps) => {
             </Listbox.Options>
           </Transition>
         </div>
-      </Listbox>
+      </Listbox> 
     </div>
   )
 }
