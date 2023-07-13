@@ -46,6 +46,7 @@ export default async function Home({ searchParams }) {
               pageNumber={(searchParams.pageNumber || 10) / 10}
               isNext={(searchParams.limit || 10) > allCars.length}
              />
+             
           </section>
         ) : (
           <div className='home__error-container'>
