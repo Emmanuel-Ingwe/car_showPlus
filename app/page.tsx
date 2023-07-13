@@ -1,3 +1,5 @@
+"use client"
+
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components'
 import { yearsOfProduction, fuels } from '@/constants'
 import { CustomButtonProps } from '@/types'
