@@ -1,11 +1,12 @@
-import React from 'react'
+"use Client"
+import { ShowMoreProps } from '@/types'
+import { useRouter } from 'next/navigation'
 
-type Props = {}
 
-const index = (props: Props) => {
+const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
   return (
     <div>index</div>
   )
 }
 
-export default index
+export default ShowMore
