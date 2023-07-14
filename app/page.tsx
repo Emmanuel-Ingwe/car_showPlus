@@ -20,7 +20,7 @@ export default function Home() {
 
   const [limit, setLimit] = useState(10)
 
-  const getCars = async () => {
+  const getCars = async ()  =>  {
     setLoading(true);
 
     try {
@@ -33,6 +33,7 @@ export default function Home() {
       });
   
       setAllCars(result)
+      
     } catch (error) {
       console.log(error)
     } finally {
