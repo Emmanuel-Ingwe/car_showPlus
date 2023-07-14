@@ -1,19 +1,15 @@
 "use client"
 
+import { useState } from 'react'
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components'
 import { yearsOfProduction, fuels } from '@/constants'
 import { CustomButtonProps } from '@/types'
 import { fetchCars } from '@/utils'
 import Image from 'next/image'
 
-export default function Home({ searchParams }) {
-  const allCars = await fetchCars({
-    manufacturer: searchParams.manufacturer || '',
-    year: searchParams.year || 2022,
-    fuel: searchParams.fuel || '',
-    limit: searchParams.limit || 10,
-    model: searchParams.model || '',
-  })
+export default async function Home({ searchParams }) {
+  const [allCars, setAllCars] = useState([])
+  const [loading, setLoading] = useState([false])
 
   const isDataEmpty =  !Array.isArray(allCars) || allCars.length <1 || !allCars
 
@@ -56,8 +52,6 @@ export default function Home({ searchParams }) {
             <p>{allCars?.message}</p>
           </div>
         )}
-
-
       </div>
     </main>
   )
