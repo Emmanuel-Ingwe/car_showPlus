@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from 'react'
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components'
@@ -7,7 +7,7 @@ import { CustomButtonProps } from '@/types'
 import { fetchCars } from '@/utils'
 import Image from 'next/image'
 
-export default async function Home({ searchParams }) {
+export default function Home() {
   const [allCars, setAllCars] = useState([])
   const [loading, setLoading] = useState(false)
 
@@ -16,12 +16,12 @@ export default async function Home({ searchParams }) {
   const [model, setModel] = useState("")
 
   const [fuel, setFuel] = useState("")
-  const [year, setYear] = useState(202)
+  const [year, setYear] = useState(2023)
 
   const [limit, setLimit] = useState(10)
 
   const getCars = async () => {
-    setLoading(true)
+    setLoading(true);
 
     try {
       const result = await fetchCars({
@@ -30,10 +30,9 @@ export default async function Home({ searchParams }) {
         fuel: fuel || '',
         limit: limit || 10,
         model: model || '',
-      })
+      });
   
       setAllCars(result)
-      
     } catch (error) {
       console.log(error)
     } finally {
