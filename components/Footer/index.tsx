@@ -20,7 +20,7 @@ const Footer = (props: Props) => {
                     <div key={link.title} className='footer__link'>
                         <h3>{link.title}</h3>
                         {link.links.map((item) => (
-                            <Link key={item.title} href={item.title} className='text-gray-500'>{item.title}</Link>
+                            <Link key={item.title} href={item.url} className='text-gray-500'>{item.title}</Link>
                         ))}
                     </div>
                 ))}
