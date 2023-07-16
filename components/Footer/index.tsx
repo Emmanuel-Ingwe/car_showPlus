@@ -38,7 +38,7 @@ const Footer = (props: Props) => {
                     </Link>
                     <Link href="/"
                     className='text-gray-500'>
-                        Terms of use
+                        Terms of use.
                     </Link>
                 </div>
             </div>
